@@ -1,6 +1,6 @@
 admin = User.create(
   nickname: "thimibka",
-  email: "fseetp@gmail.com",
+  email: ENV['ADMIN_MAIL'],
   password: ENV['ADMIN_MDP'],
   is_admin: true
 )
