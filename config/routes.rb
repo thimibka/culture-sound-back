@@ -7,7 +7,9 @@ Rails.application.routes.draw do
                sessions: 'users/sessions',
                registrations: 'users/registrations'
              }
-             get '/users', to: 'users/registrations#index'
+             devise_scope :user do
+              get "/some/route" => "some_devise_controller"
+              end
 
   
   resources :playlist_contents
