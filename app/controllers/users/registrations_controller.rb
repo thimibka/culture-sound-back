@@ -1,8 +1,14 @@
 class Users::RegistrationsController < Devise::RegistrationsController
+  
+  def index
+    @users = User.all
+    render json: @User
+  end
+
   def show
     render json: @User
   end
-  
+
   def create
     super do |resource|
       UserMailer.welcome_email(resource)
