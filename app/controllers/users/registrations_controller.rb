@@ -1,4 +1,8 @@
 class Users::RegistrationsController < Devise::RegistrationsController
+  def show
+    render json: @User
+  end
+  
   def create
     super do |resource|
       UserMailer.welcome_email(resource)
