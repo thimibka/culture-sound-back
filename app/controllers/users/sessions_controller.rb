@@ -1,5 +1,14 @@
 class Users::SessionsController < Devise::SessionsController
   respond_to :json
+  
+  def index
+    @users = User.all
+    render json: @User
+  end
+
+  def show
+    render json: @User
+  end
 
   private
 
