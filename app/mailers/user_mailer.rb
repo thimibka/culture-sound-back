@@ -1,5 +1,5 @@
 class UserMailer < Devise::Mailer
-  default from: 'administrateur@culture-sound.com'/
+  default from: 'administrateur@culture-sound.com'
 
   
   def welcome_email(user)
