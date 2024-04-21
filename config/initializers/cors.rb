@@ -16,7 +16,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   end
 
   allow do
-    origins 'https://https://musical-knowledge.vercel.app/'
+    origins 'https://culture-sound.vercel.app'
 
     resource '*',
             headers: :any,
