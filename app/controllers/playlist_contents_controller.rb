@@ -6,7 +6,7 @@ class PlaylistContentsController < ApplicationController
 
   def add_song_playlist_content
     def get_playlist_videos(playlist_url, playlist_id)
-      playlist = Yt::Playlist.new id: playlist_url
+      playlist = Yt::Playlist.new id: playlist_url, key: ENV['YOUTUBE_API']
       playlist.playlist_items.each do |video|
         existing_item = PlaylistContent.find_by(youtube_title: video.title)
         if existing_item
