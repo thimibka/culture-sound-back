@@ -226,7 +226,7 @@ GEM
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
-    yt (0.32.6)
+    yt (0.33.4)
       activesupport
     zeitwerk (2.6.13)
 
@@ -249,7 +249,7 @@ DEPENDENCIES
   rspec
   table_print
   tzinfo-data
-  yt (~> 0.32.0)
+  yt (~> 0.33.4)
 
 RUBY VERSION
    ruby 3.0.0p0

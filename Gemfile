@@ -7,7 +7,7 @@ gem 'faker'
 gem 'rspec'
 
 gem 'table_print'
-gem 'yt', '~> 0.32.0'
+gem 'yt', '~> 0.33.4'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4', '>= 7.0.4.2'
 
