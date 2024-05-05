@@ -11,6 +11,19 @@ before_action :set_game, only: %i[ show update destroy]
     render json: @game
   end
 
+  # def get_user_stats
+  #   if current_user.present?
+  #     @games = Game.where(user: current_user)
+  #     render json: @games
+  #   else
+  #     render json: { error: "Vous devez être connecté pour accéder à vos statistiques de jeu." }, status: :unauthorized
+  #   end
+  # end
+
+
+
+
+
   def show
     render json: @game
   end
@@ -43,7 +56,7 @@ before_action :set_game, only: %i[ show update destroy]
 
   end
   def game_params
-    params.permit(:score, :user)
+    params.require(:game).permit(:score, :user)
   end
 
   def get_stats_params
